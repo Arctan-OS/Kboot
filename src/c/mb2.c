@@ -47,11 +47,11 @@ int parse_mb2i() {
 	struct multiboot_tag_framebuffer_common common = fb->common;
 
 	ARC_DEBUG(INFO, "Framebuffer 0x%llx (%d) %dx%dx%d\n", common.framebuffer_addr, common.framebuffer_type, common.framebuffer_width, common.framebuffer_height, common.framebuffer_bpp);
-	Arc_MainTerm.framebuffer = (void *)ARC_PHYS_TO_HHDM(common.framebuffer_addr);
-	Arc_MainTerm.fb_width = common.framebuffer_width;
-	Arc_MainTerm.fb_height = common.framebuffer_height;
-	Arc_MainTerm.fb_bpp = common.framebuffer_bpp;
-	Arc_MainTerm.fb_pitch = common.framebuffer_bpp;
+	Arc_CurrentTerm->framebuffer = (void *)ARC_PHYS_TO_HHDM(common.framebuffer_addr);
+	Arc_CurrentTerm->fb_width = common.framebuffer_width;
+	Arc_CurrentTerm->fb_height = common.framebuffer_height;
+	Arc_CurrentTerm->fb_bpp = common.framebuffer_bpp;
+	Arc_CurrentTerm->fb_pitch = common.framebuffer_bpp;
 
 	return 0;
 }
