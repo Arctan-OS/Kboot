@@ -27,6 +27,16 @@
 #ifndef ARC_BOOT_PARSE_H
 #define ARC_BOOT_PARSE_H
 
+
+/**
+ * A multiplexer to call parse functions
+ *
+ * This function calls the appropriate function to parse out all the
+ * boot information passed by a given bootstrapper as specified by
+ * Arc_BootMeta->boot_proc.
+ *
+ * @return zero on success.
+*/
 int parse_boot_info();
 
 #endif

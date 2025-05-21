@@ -32,6 +32,9 @@
 #include <mm/pmm.h>
 #include <lib/util.h>
 
+/**
+ * The Multiboot2 information structure from MB2BSP
+*/
 struct ARC_MB2BootInfo {
 	uint64_t mbi_phys;
 	uint64_t fb;

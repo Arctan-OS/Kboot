@@ -23,12 +23,18 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  *
  * @DESCRIPTION
+ * 
 */
 #ifndef ARC_BOOT_MB2_H
 #define ARC_BOOT_MB2_H
 
 #include <global.h>
 
+/**
+ * Read Multiboot2 information structure passed by bootstrapper 
+ *
+ * @return zero on success.
+*/
 int parse_mb2i(void);
 
 #endif
