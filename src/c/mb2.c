@@ -4,10 +4,10 @@
  * @author awewsomegamer <awewsomegamer@gmail.com>
  *
  * @LICENSE
- * Arctan - Operating System Kernel
+ * Arctan-OS/Kernel - Operating System Kernel
  * Copyright (C) 2023-2025 awewsomegamer
  *
- * This file is part of Arctan.
+ * This file is part of Arctan-OS/Kernel.
  *
  * Arctan is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -43,18 +43,18 @@ struct ARC_MB2BootInfo {
 int parse_mb2i() {
 	ARC_DEBUG(INFO, "Parsing Multiboot2\n");
 
-	struct ARC_MB2BootInfo *info = (struct ARC_MB2BootInfo *)ARC_PHYS_TO_HHDM(Arc_BootMeta->boot_info);
+	// struct ARC_MB2BootInfo *info = (struct ARC_MB2BootInfo *)ARC_PHYS_TO_HHDM(Arc_BootMeta->boot_info);
 
-	struct multiboot_tag_framebuffer *fb = (struct multiboot_tag_framebuffer *)ARC_PHYS_TO_HHDM(info->fb);
+	// struct multiboot_tag_framebuffer *fb = (struct multiboot_tag_framebuffer *)ARC_PHYS_TO_HHDM(info->fb);
 
-	struct multiboot_tag_framebuffer_common common = fb->common;
+	// struct multiboot_tag_framebuffer_common common = fb->common;
 
-	ARC_DEBUG(INFO, "Framebuffer 0x%llx (%d) %dx%dx%d\n", common.framebuffer_addr, common.framebuffer_type, common.framebuffer_width, common.framebuffer_height, common.framebuffer_bpp);
-	Arc_CurrentTerm->framebuffer = (void *)ARC_PHYS_TO_HHDM(common.framebuffer_addr);
-	Arc_CurrentTerm->fb_width = common.framebuffer_width;
-	Arc_CurrentTerm->fb_height = common.framebuffer_height;
-	Arc_CurrentTerm->fb_bpp = common.framebuffer_bpp;
-	Arc_CurrentTerm->fb_pitch = common.framebuffer_bpp;
+	// ARC_DEBUG(INFO, "Framebuffer 0x%llx (%d) %dx%dx%d\n", common.framebuffer_addr, common.framebuffer_type, common.framebuffer_width, common.framebuffer_height, common.framebuffer_bpp);
+	// Arc_CurrentTerm->framebuffer = (void *)ARC_PHYS_TO_HHDM(common.framebuffer_addr);
+	// Arc_CurrentTerm->fb_width = common.framebuffer_width;
+	// Arc_CurrentTerm->fb_height = common.framebuffer_height;
+	// Arc_CurrentTerm->fb_bpp = common.framebuffer_bpp;
+	// Arc_CurrentTerm->fb_pitch = common.framebuffer_bpp;
 
 	return 0;
 }

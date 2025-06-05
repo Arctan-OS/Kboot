@@ -4,10 +4,10 @@
  * @author awewsomegamer <awewsomegamer@gmail.com>
  *
  * @LICENSE
- * Arctan - Operating System Kernel
+ * Arctan-OS/Kernel - Operating System Kernel
  * Copyright (C) 2023-2025 awewsomegamer
  *
- * This file is part of Arctan.
+ * This file is part of Arctan-OS/Kernel.
  *
  * Arctan is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -31,17 +31,17 @@
 int parse_boot_info() {
 	ARC_DEBUG(INFO, "Parsing boot information\n");
 
-	switch (Arc_BootMeta->boot_proc) {
-		case ARC_BOOTPROC_MB2: {
-			parse_mb2i();
-			break;
-		}
+	// switch (Arc_BootMeta->boot_proc) {
+	// 	case ARC_BOOTPROC_MB2: {
+	// 		parse_mb2i();
+	// 		break;
+	// 	}
 
-		case 0: {
-			ARC_DEBUG(INFO, "No boot information found\n");
-			return -1;
-		}
-	}
+	// 	case 0: {
+	// 		ARC_DEBUG(INFO, "No boot information found\n");
+	// 		return -1;
+	// 	}
+	// }
 
 	ARC_DEBUG(INFO, "Finished parsing boot information\n");
 
